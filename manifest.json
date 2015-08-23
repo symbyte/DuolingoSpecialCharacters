@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+
+	"name": "Easy Duolingo Typing",
+	"description": "This extension allows for easy use of special characters when typing spanish into Duolingo",
+	"version": "1.0",
+
+	"content_scripts":[
+		{
+			"matches": ["https://www.duolingo.com/*"],
+			"js": ["jquery.js","easySpecChar.js"]
+
+		}
+	],
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs"
+	]
+}
